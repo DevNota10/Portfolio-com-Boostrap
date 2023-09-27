@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 } */
-
+body{
+    background: #202020!important;
+}
 /* myFremeWork */
 .h90{
     height: 90px;
@@ -84,8 +86,15 @@ button {
 
 section {
     box-shadow: 10px 10px 40px #7c4dff inset;
+    margin-bottom: 100px;
 }
- main  .lang-skills {
+
+main {
+    padding-bottom: 100px !important;
+    /* color: #ffff; */
+    
+}
+ main  .language-skills {
     max-width: 60px;
     max-height: 60px;
     font-size: 40px;
@@ -93,7 +102,7 @@ section {
     background: linear-gradient(#00b0ff, #d500f9, #f50057);
 }
 
-main .box-skills{
+main .box-language{
     height: 150px;
 }
 
@@ -110,3 +119,151 @@ main .box-img-dev > video{
     border-top-right-radius: 10%;
     border-bottom-left-radius: 10%;
 }
+
+main .container-skill-percent{
+    width: 100%;
+    max-height: 100%;
+    position: relative;
+    padding: 10px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    gap: 40px;
+    border-radius: 5px;
+ }
+
+ .card-skill{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.card-skill .percent{
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+ .card-skill .percent svg{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    transform: rotate(270deg);
+}
+ .card-skill .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 4;
+    stroke: #191919;
+    transform: translate(15px,15px);
+}
+
+.card-skill .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray:307;
+    stroke-dashoffset:calc(307 - (307 * var(--num)) / 100 ) ;
+
+    opacity: 0;
+    animation:fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    
+    100%{
+        opacity:1;
+    }
+    
+}
+.dot{
+   position: absolute; 
+   inset: 15px;
+   z-index: 10;
+   transform: rotate(calc(3.6deg * var(--num)));
+   animation: animateDot 2s linear forwards;
+}
+@keyframes animateDot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.dot::before{
+    content:'' ;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr)
+}
+
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    
+    opacity: 0;
+    animation:fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.number > h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff ;
+    font-size: 20px;
+
+    padding: 10px 0;
+    margin: 0;
+}
+.number > h2 span{
+   font-weight:300 ; 
+   color: #fff;
+   font-size: 0.5em;
+
+}
+.container-skill-percent .number > p{
+    font-weight: 300px;
+    font-size: 9px;
+    margin: 0;
+    line-height: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color:rgba(255, 255, 255, 0.75) ;  
+}
+
+
+@media screen and (max-width:400px) {
+    main .bx-profession>h1 {
+        font-size: 32px !important;
+
+    }
+
+    main .box-language {
+        position: relative;
+        padding: 70px 0;
+    }
+
+
+ 
+}
+
