@@ -1,14 +1,21 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 body{
-    background: #202020!important;
+    background: #010101!important;
+    transition: background 0.2s linear;
 }
+body.active-light{
+    transition: background 0.2s linear;
+    height: 4000px;
+    background: #e9e8e8!important;
+    
+}
+
 /* myFremeWork */
+
 .h90{
-    height: 90px;
+    min-height: 90px;
+}
+.row{
+    transition: 0.5s !important;
 }
 .h200{
     min-height: 200px;
@@ -18,33 +25,65 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
 }
-.mydark{
-    color: #212020;
-    background: #212020;
+.logo{
+    border-radius: 20px;
+    min-width: 150px;
+  
+}
+
+.dark-p{
+    color: #5c5a5a;
+}
+
+.bg-linear-gradient{
+    animation: linearGradient-animetion 10s ease-in-out infinite;
+    background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057) no-repeat;
+    background-size: 300% 300%;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title{
+    animation: linearGradient-animetion ease-in-out 5s infinite;
+    background: linear-gradient(-45deg, #232323,#bbb,#000 ); 
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* General Divs : */
-
 a{
     color: #fff!important;
     text-decoration: none!important;
 }
-button {
 
-    background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
-    animation: gradient 10s ease-in-out infinite;
-    background-size: 300% 300%;
-    text-decoration: none;
-    transition: 0.5s !important;
- 
-    padding: 0.5rem;
-    border: 0;
-    border-radius: 5px !important;
+h1{
+    font-family: 'Black Ops One', cursive;
 }
 
-.logo{
-    border-radius: 10%;
-    background-image: url(../img/logo-2.png) ;
+img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes linearGradient-animetion {
+    0%,100%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+}
+
+button.bg-linear-gradient{
+    padding: 0.5rem;
+    border-radius: 5px !important;
+    width: 200px;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 2px;
 }
 
 .box-ch-background .checkbox {
@@ -60,6 +99,7 @@ button {
     padding: 5px;
     border-radius: 50px;
     transform: scale(1.3);
+    background: linear-gradient(45deg,#000 60%,#ccc);
 }
 
 .box-ch-background .ball {
@@ -80,91 +120,97 @@ button {
 .fa-moon, .fa-sun {
     color: #ffff;
 }
-
-
-/*** section main  ****/
-
-section {
-    box-shadow: 10px 10px 40px #7c4dff inset;
-    margin-bottom: 100px;
+header{
+    border-bottom: 4px solid #dddd;
+    height: 100px !important;
+}
+header nav #btn-mobile {
+    display: none;
 }
 
-main {
-    padding-bottom: 100px !important;
-    /* color: #ffff; */
+/*** Main Section   ****/
+section{
+    box-shadow: 10px 10px 40px #7c4dff inset;
+    border-radius: 20px;
+    margin: 100px 0;
     
 }
- main  .language-skills {
-    max-width: 60px;
-    max-height: 60px;
-    font-size: 40px;
-    border-radius: 50%;
-    background: linear-gradient(#00b0ff, #d500f9, #f50057);
+
+section:nth-of-type(1){
+    top: 90px;
+    padding: 60px 20px !important;
+    margin: 0 auto;
 }
+
 
 main .box-language{
-    height: 150px;
+    height: 150px; 
+    gap: 20px;
+    margin-top: 20px !important;
 }
 
+ main  .language-skills {
+    font-size: 50px;
+    border-radius: 20%;
+    background: linear-gradient(75deg,#d500f9, #232323,#faf9f9,#000 80%,#d500f9); 
+    flex: 1 0 auto ;  
+    transform: rotate(45deg);
+}
+
+main .brands{
+    transform: rotate(-45deg);
+}
 main .bx-profession>h1 {
-    font-size: 6vw;
-    background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    word-break: keep-all;
-    font-family: 'Black Ops One', cursive;
+    font-size: 6vw;   
 }
 
-main .box-img-dev > video{
+main .text-about-me{
+    columns: 200px 2 !important;
+    column-gap: 30px !important;
+    padding: 20px !important;
+    text-align: justify;
+    transition: 0.5s;
+}
+
+main .box-img-dev,video {
+    background:linear-gradient(-45deg,#00b0ff, #d500f9, #f50057);
+    padding: 5px;
     border-top-right-radius: 10%;
     border-bottom-left-radius: 10%;
 }
 
-main .container-skill-percent{
-    width: 100%;
-    max-height: 100%;
-    position: relative;
-    padding: 10px;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    gap: 40px;
-    border-radius: 5px;
- }
-
+/* Section Percent Skills --------------------------------------- */
+section.percent-skills{
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 5px 5px 200px #000 inset;
+    background: linear-gradient(75deg,#00aeff7a, #d400f971, #f500567d);
+    margin-top: 100px;
+  }
+  
+  section.percent-skills.skillsBg{
+      background: linear-gradient(30deg,#000 60%, #d400f9, #010101); 
+  }
+  
  .card-skill{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100px !important;
+    height: 100px !important;
     border-radius: 50%;
 }
-
-.card-skill .percent{
-    position: relative;
-    width: 130px;
-    height: 130px;
-}
-
  .card-skill .percent svg{
-    position: relative;
     width: 130px;
     height: 130px;
     transform: rotate(270deg);
 }
+
  .card-skill .percent svg circle{
-    width: 100%;
-    height: 100%;
     fill: transparent;
     stroke-width: 4;
     stroke: #191919;
     transform: translate(15px,15px);
 }
 
-.card-skill .percent svg circle:nth-child(2){
+ .card-skill .percent svg circle:nth-child(2){
     stroke: var(--clr);
     stroke-dasharray:307;
     stroke-dashoffset:calc(307 - (307 * var(--num)) / 100 ) ;
@@ -180,13 +226,12 @@ main .container-skill-percent{
     
     100%{
         opacity:1;
-    }
-    
+    } 
 }
 .dot{
    position: absolute; 
    inset: 15px;
-   z-index: 10;
+   z-index: 1;
    transform: rotate(calc(3.6deg * var(--num)));
    animation: animateDot 2s linear forwards;
 }
@@ -198,6 +243,7 @@ main .container-skill-percent{
         transform: rotate(calc(3.6deg * var(--num)));
     }
 }
+
 .dot::before{
     content:'' ;
     position: absolute;
@@ -213,57 +259,75 @@ main .container-skill-percent{
 }
 
 .number{
-    position: absolute;
     inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    
     opacity: 0;
     animation:fadeIn 1s linear forwards;
     animation-delay: 2.5s;
 }
 
-.number > h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff ;
-    font-size: 20px;
-
-    padding: 10px 0;
-    margin: 0;
-}
 .number > h2 span{
-   font-weight:300 ; 
-   color: #fff;
-   font-size: 0.5em;
+   font-size: 0.6em;
 
 }
 .container-skill-percent .number > p{
-    font-weight: 300px;
     font-size: 9px;
-    margin: 0;
     line-height: 2px;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    color:rgba(255, 255, 255, 0.75) ;  
 }
 
+/******** Sections Projects ********/
 
-@media screen and (max-width:400px) {
-    main .bx-profession>h1 {
-        font-size: 32px !important;
-
-    }
-
-    main .box-language {
-        position: relative;
-        padding: 70px 0;
-    }
-
-
- 
+section.projects .container {
+    margin-bottom: 150px;
 }
 
+section.projects .box-btn-ste-repos {
+    max-width: 210px;
+    padding: 5px;
+    display: flex;
+    gap: 30px;
+}
+
+section.projects .highlight-img{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    box-shadow: 5px 5px 30px #000 inset;
+    border-radius: 20px ;
+   
+}
+section.projects .img-Box{
+    width: 100% ;
+    border-radius: 20px ;
+    padding: 10px;
+    gap: 10px;
+}
+section.projects .img-wrapper{
+    /* background: transparent; */
+}
+
+section.projects .img-wrapper > img{
+    cursor: pointer;
+    border-radius: 20px ;
+}
+
+section#contact{
+    height: 700px;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+/* Media Queries */
+
+@media screen and (max-width:580px) {
+    main .box-language .language-skills {
+        width: 60px !important;
+        height: 60px !important ;
+        font-size: 40px;
+        border-radius: 20%;
+        transform: rotate(0);
+    }
+    main .brands{
+        transform: rotate(0);
+    }
+    
+}

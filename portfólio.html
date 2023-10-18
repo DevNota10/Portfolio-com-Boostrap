@@ -19,243 +19,310 @@
 
     <title>Portfólio Kleber</title>
 </head>
-<body>
-    <header class="bg-black">
-        <div class="container">
-            <div class="row d-flex justify-content-between">
-                <div class="h90 col-3 bg-black">
-                    <div class="logo h90 bg-img "></div>
-                </div>
-                <div class="h90 col-6 bg-black ">
-                    <nav>
-                        <ul id="menu" role="menu" class="h90 d-flex list-unstyled justify-content-around align-items-center ">
-                            <li><a href="#sobre">Sobre</a></li>
-                            <li><a href="#projetos">Projetos</a></li>
-                            <li><a href="#contato">Contato</a></li>       
-                        </ul>
-                    </nav>
+<body class="">
 
-                </div>
-                <div class=" h90 col-3 bg-black ">
+    <header class=" h90 bg-black position-fixed w-100   z-3  ">
+            <div class=" container-xl">
+                <div class="row ">
+
+                    <div class="col-3 ">
+                        <div class="logo h90 bg-img" style="background-image: url(img/logo-2.svg);" ></div>
+                    </div>
+        
+                    <div class="h90  col-6 ">
+                        <nav>
+                                <button type="button" class="bg-linear-gradient btn" id="btn-mobile" 
+                                aria-label="Abrir Menu"
+                                aria-haspopup="true"
+                                aria-expanded="false">  
+                                    Menu
+                                </button>
+
+                            <ul id="menu" role="menu" class="h90 d-flex list-unstyled justify-content-around align-items-center">
+                                <li><a href="#aboutMe">Sobre</a></li>
+                                <li><a href="#projects">Projetos</a></li>
+                                <li><a href="#contact">Contato</a></li>       
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class=" h90 col-3 ">
                         <div class=" h-100 box-ch-background position-relative d-flex align-items-center justify-content-center h-100">
                             <input type="checkbox" class="checkbox" name="check" id="check" />
-                            <label class="d-flex justify-content-between mydark" for="check">
+                            <label class=" title d-flex justify-content-between " for="check">
                               <i class="fas fa-sun"></i>
                               <i class="fas fa-moon"></i>
                               <div class="ball position-absolute "></div>
                             </label>
-                    </div>
+                        </div>
                 </div>
+                
             </div>
-        </div>
     </header>
 
-    <section class=" container-xl sobre">
-        <main>
-            <div class=" box-language row justify-content-center justify-content-evenly align-items-center text-center  ">
+    <section id="aboutMe" class="about-me container-xl position-relative pt-5 pb-5 mb-5 ">
+        <div class="container-stars">
+            <div class="starbox">
+                <main>
+                    <div class=" box-language d-flex justify-content-center justify-content-evenly align-items-center text-center flex-wrap ">
+                     
+                        <div class=" language-skills">
+                            <i class="fa-brands brands fa-html5"></i>
+                        </div>
+                        <div class="  language-skills">
+                            <i class="fa-brands brands fa-css3-alt"></i>
+                        </div>
+                        <div class="  language-skills">
+                            <i class="fa-brands  brands fa-bootstrap"></i>
+                        </div>
+                        <div class="  language-skills">
+                            <i class="fa-brands brands fa-js"></i>
+                        </div>
+                        <div class="  language-skills">
+                            <i class="fa-brands brands fa-react"></i>
+                        </div>
+                        <div class="  language-skills">
+                            <i class="fa-brands brands fa-git-alt"></i>
+                        </div>
+                        <div class="  language-skills ">
+                            <i class="fa-brands brands fa-github"></i>
+                        </div>
+                    </div>
+
+                        <div class="bx-profession d-flex text-center align-items-center justify-content-center h200 "  data-anime="left">
+                          <h1 class="bg-linear-gradient">Front-End Developper </h1>
+                        </div>
              
-                <div class="col-3 language-skills">
-                    <i class="fa-brands brands fa-html5"></i>
-                </div>
-                <div class="col-3  language-skills">
-                    <i class="fa-brands brands fa-css3-alt"></i>
-                </div>
-                <div class="col-3  language-skills">
-                    <i class="fa-brands  brands fa-bootstrap"></i>
-                </div>
-                <div class="col-3  language-skills">
-                    <i class="fa-brands brands fa-js"></i>
-                </div>
-                <div class="col-3  language-skills">
-                    <i class="fa-brands brands fa-react"></i>
-                </div>
-                <div class="col-3  language-skills">
-                    <i class="fa-brands brands fa-git-alt"></i>
-                </div>
-                <div class="col-3  language-skills">
-                    <i class="fa-brands brands fa-github"></i>
-                </div>
-            </div>
+                    <div class=" row mt-5 ">
+                        <div class="box-img-dev bg-linear-gradient  col m-auto col-md-6" data-anime="right">  
+                            
+                            <video 
+                            src="videos/Video-animado-dev.mp4"
+                            muted
+                            type="video/mp4"
+                            width="100%"
+                            height="100%"
+                            autoplay
+                            loop
+                          ></video>
+                        </div>  
+                        
+                        <div class="row mt-5  text-light col-12 m-auto col-md-6 lh-lg ">
+                            <div class=" text-center">
+                                <h1 class=" title" >Sobre</h1>
+                            </div>
+                                <div class="text-about-me  dark-p ">
+                                    <p>
+                                      Olá! Quero lhe apresentar o meu portfólio, um compilado de projetos
+                                      e trabalhos que desenvolvi ao longo da minha carreira. Aqui você
+                                      encontrará uma variedade de temas, desde artes gráficas, design de
+                                      interiores, design de websites, arquitetura, entre outros. Cada
+                                      projeto foi executado com muito cuidado e atenção aos detalhes,
+                                      sempre buscando agregar valor ao cliente e trazer soluções
+                                      criativas.
+                                    </p>
+                                    <p>
+                                      Neste portfólio, você poderá verificar a qualidade do meu trabalho
+                                      e também conferir minha evolução profissional ao longo do tempo.
+                                      Aqui encontrará desde trabalhos mais simples até os mais
+                                      complexos, revelando a minha capacidade de adaptar-me à diferentes
+                                      demandas e necessidades dos clientes. Espero que meu portfólio
+                                      possa ser útil para você. Sinta-se à vontade para explorá-lo e
+                                      entrar em contato comigo caso tenha alguma dúvida ou interesse em
+                                      algum dos meus serviços. Terei o maior prazer em ajudá-lo.
+                                      Obrigado pela atenção!
+                                    <p>
+                                      AT.te:
+                                      <i
+                                        style="
+                                          font-family: 'Dancing Script', cursive;
+                                          border-bottom: 2px solid;
+                                        "
+                                        >Kleber Gaspar</i>
+                                    </p>
+                               
+                                </div>
+                            <div class="box-btn-contact text-center  ">
+                                <button  type="button" class=" bg-linear-gradient btn  btn-lg m-2" ><a href="#contact">Contato</a></button>
+                              </div>
+                            </div>
+                    </div>      
+                </main>
+            </section>
 
- 
-                <div class="bx-profession row text-center align-items-center  h200 "  data-anime="left">
-                  <h1>Front-End Developper </h1>
-                </div>
-     
+            <section class="percent-skills container-xl pt-5 pb-5 ">
+
+                <h1 class="title row justify-content-center align-center">Skills:</h1>
+                <div class="container-skill-percent p-md-5 d-flex flex-wrap gap-3 gap-md-5 justify-content-center z-0" data-anime="left">
+
+                    <div class="card-skill d-flex position-relative justify-content-center align-items-center">
+                      <div class="percent position-relative" style="--clr:#0f0;--num:99;">
             
-            <div class=" row mt-5 ">
-
-                <div class="box-img-dev col m-auto col-md-6" data-anime="right">  
-                    <!-- <img src="img/Kleber-perfil.png" alt=""> -->
-                    <video
-                    src="videos/Video-animado-dev.mp4"
-                    muted
-                    type="video/mp4"
-                    width="100%"
-                    height="100%"
-                    autoplay
-                    loop
-                  ></video>
-                </div>  
-    
-                  <div class="texto-sobre text-light col-12 col-md-6  ">
-                    <h1 class="text-center">Sobre</h1>
-                    <p>
-                      Olá! Quero lhe apresentar meu portfólio, um compilado de projetos
-                      e trabalhos que desenvolvi ao longo da minha carreira. Aqui você
-                      encontrará uma variedade de temas, desde artes gráficas, design de
-                      interiores, design de websites, arquitetura, entre outros. Cada
-                      projeto foi executado com muito cuidado e atenção aos detalhes,
-                      sempre buscando agregar valor ao cliente e trazer soluções
-                      criativas.
-                    </p>
-                    <p>
-                      Neste portfólio, você poderá verificar a qualidade do meu trabalho
-                      e também conferir minha evolução profissional ao longo do tempo.
-                      Aqui encontrará desde trabalhos mais simples até os mais
-                      complexos, mostrando minha capacidade de adaptar-me à diferentes
-                      demandas e necessidades dos clientes. Espero que meu portfólio
-                      possa ser útil para você. Sinta-se à vontade para explorá-lo e
-                      entrar em contato comigo caso tenha alguma dúvida ou interesse em
-                      algum dos meus serviços. Terei o maior prazer em ajudá-lo.
-                      Obrigado pela atenção!
-                    </p>
-      
-                    <p>
-                      AT.te:
-                      <i
-                        style="
-                          font-family: 'Dancing Script', cursive;
-                          border-bottom: 2px solid;
-                        "
-                        >Kleber Gaspar</i>
-                    </p>
-                    <div class="box-btn-contact text-center">
-                        <button  type="button" class="btn btn-primary btn-lg" ><a href="#contact">Contato</a></button>
+                          <div class="dot"></div>
+                          <svg class="position-relative">
+                              <circle cx="50" cy="50" r="50"></circle>
+                              <circle cx="50" cy="50" r="50"></circle>
+                          </svg>
+                      </div>
+                      <div class="number d-flex position-absolute justify-content-center align-items-center flex-column">
+                          <h2 class="title p-2 m-0 fs-5">99<span>%</span></h2>
+                          <p class="text-uppercase text-secondary">Html</p>
                       </div>
                     </div>
-            </div>      
-        </main>
-    </section>
-
-    <section class=" skills container-xl">
-        <!-- <h1>Skills</h1> -->
-        <div class="container-skill-percent position-relative row justify-content-around flex-wrap  justify-content-center " data-anime="left">
-
-            <div class="card-skill col-md-1 col-3">
-              <div class="percent" style="--clr:#0f0;--num:99;">
-    
-                  <div class="dot"></div>
-                  <svg>
-                      <circle cx="50" cy="50" r="50"></circle>
-                      <circle cx="50" cy="50" r="50"></circle>
-                  </svg>
-              </div>
-              <div class="number">
-                  <h2>99<span>%</span></h2>
-                  <p>Html</p>
-              </div>
-            </div>
-          
-            <div class="card-skill col-md-1 col-3">
-                <div class="percent" style="--clr:#1c27f3;--num:90;">
-      
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="50" cy="50" r="50"></circle>
-                        <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                </div>
-                <div class="number">
-                    <h2>90<span>%</span></h2>
-                    <p>Css</p>
-                </div>
-            </div>
+                  
+                    <div class="card-skill d-flex position-relative justify-content-center align-items-center">
+                        <div class="percent position-relative" style="--clr:#1c27f3;--num:90;">
+              
+                            <div class="dot"></div>
+                            <svg class="position-relative">
+                                <circle cx="50" cy="50" r="50"></circle>
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                        </div>
+                        <div class="number d-flex position-absolute justify-content-center align-items-center flex-column">
+                            <h2 class="title p-2 m-0 fs-5">90<span>%</span></h2>
+                            <p class="text-uppercase text-secondary">Css</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-skill d-flex position-relative justify-content-center align-items-center">
+                        <div class="percent position-relative" style="--clr:#d500f9;--num:60;">
+              
+                            <div class="dot"></div>
+                            <svg class="position-relative">
+                                <circle cx="50" cy="50" r="50"></circle>
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                        </div>
+                        <div class="number d-flex position-absolute justify-content-center align-items-center flex-column">
+                            <h2 class="title p-2 m-0 fs-5">60<span>%</span></h2>
+                            <p class="text-uppercase text-secondary">bootstrap</p>
+                        </div>
+                    </div>
+                  
+                    <div class="card-skill d-flex position-relative justify-content-center align-items-center">
+                        <div class="percent position-relative" style="--clr:#f4fc04;--num:73;">
+              
+                            <div class="dot"></div>
+                            <svg class="position-relative">
+                                <circle cx="50" cy="50" r="50"></circle>
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                        </div>
+                        <div class="number d-flex position-absolute justify-content-center align-items-center flex-column">
+                            <h2 class="title p-2 m-0 fs-5">73<span>%</span></h2>
+                            <p class="text-uppercase text-secondary">JavaScript</p>
+                        </div>
+                    </div>
+                  
+                    <div class="card-skill d-flex position-relative justify-content-center align-items-center">
+                        <div class="percent position-relative" style="--clr:#2ec7fa;--num:45;">
+              
+                            <div class="dot"></div>
+                            <svg class="position-relative">
+                                <circle cx="50" cy="50" r="50"></circle>
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                        </div>
+                        <div class="number d-flex position-absolute justify-content-center align-items-center flex-column">
+                            <h2 class="title p-2 m-0 fs-5">45<span>%</span></h2>
+                            <p class="text-uppercase text-secondary">React</p>
+                        </div>
+                    </div>
             
-            <div class="card-skill col-md-1 col-3">
-                <div class="percent" style="--clr:#d500f9;--num:60;">
+                    <div class="card-skill d-flex position-relative justify-content-center align-items-center">
+                        <div class="percent position-relative" style="--clr:#f00;--num:65;">
+              
+                            <div class="dot"></div>
+                            <svg class="position-relative">
+                                <circle cx="50" cy="50" r="50"></circle>
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                        </div>
+                        <div class="number d-flex position-absolute justify-content-center align-items-center flex-column">
+                            <h2 class="title p-2 m-0 fs-5">65<span>%</span></h2>
+                            <p class="text-uppercase text-secondary">Git</p>
+                        </div>
+                    </div>
+              
+                    <div class="card-skill d-flex position-relative justify-content-center align-items-center">
+                        <div class="percent position-relative" style="--clr:#bbbb;--num:80;">
+              
+                            <div class="dot"></div>
+                            <svg class="position-relative">
+                                <circle cx="50" cy="50" r="50"></circle>
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                        </div>
+                        <div class="number d-flex position-absolute justify-content-center align-items-center flex-column">
+                            <h2 class="title p-2 m-0 fs-5">80<span>%</span></h2>
+                            <p class="text-uppercase text-secondary">GitHub</p>
+                        </div>
+                    </div>
+                  </div><!--container-skill-percent-->
+            </section>
       
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="50" cy="50" r="50"></circle>
-                        <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                </div>
-                <div class="number">
-                    <h2>60<span>%</span></h2>
-                    <p>bootstrap</p>
-                </div>
-            </div>
-          
-            <div class="card-skill col-md-1 col-3">
-                <div class="percent" style="--clr:#f4fc04;--num:73;">
-      
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="50" cy="50" r="50"></circle>
-                        <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                </div>
-                <div class="number">
-                    <h2>73<span>%</span></h2>
-                    <p>JavaScript</p>
-                </div>
-            </div>
-          
-            <div class="card-skill col-md-1 col-3">
-                <div class="percent" style="--clr:#2ec7fa;--num:45;">
-      
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="50" cy="50" r="50"></circle>
-                        <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                </div>
-                <div class="number">
-                    <h2>45<span>%</span></h2>
-                    <p>React</p>
-                </div>
-            </div>
+            <section id="projects" class="projects container-xl " >
+                <h1 class="h200 title d-flex align-items-center justify-content-center ">Projetos:</h1>
+               
+                <div class=" row ">
+                    <div class="text-project  dark-p col-12 col-md-6  p-4  text-md-end" data-anime="right">
+                      <h2 class="text-center p-4"> Saúde e bem-estar</h2>
+                      <p >
+                          O projeto Saúde e Bem-Estar foi um dos primeiros projetos realizados e é motivo de orgulho para mim. Ele foi desenvolvido com o objetivo de compartilhar informações úteis sobre saúde e bem-estar, e fornecer recursos práticos para ajudar as pessoas a adotarem hábitos mais saudáveis.
+                          Desenvolvido com as ferramentas HTML, CSS e JavaScript, este projeto é um exemplo de como a tecnologia pode ser utilizada para apoiar e incentivar um estilo de vida saudável.
+        
+                          Este projeto é uma ótima oportunidade para os iniciantes em programação praticarem suas habilidades e aprenderem sobre o desenvolvimento web. Ao explorar o código-fonte, você terá a chance de entender como as diferentes tecnologias são utilizadas em conjunto para criar uma aplicação funcional.
+                      </p>
+                      
+                      <div class="box-btn-ste-repos">
+                        <button class="bg-linear-gradient"><a target="_blank" href="https://projeto-saude-e-bem-estar.devnota10k.com/">Site</a> </button>
+                        <button class="bg-linear-gradient">
+                          <a
+                            target="_blank"
+                            href="https://github.com/DevNota10/Projeto-site-saude-e-bem-estar">Repositório</a>
+                        </button>
+                      </div><!--box-btn-ste-repos-->
+        
+                    </div><!--text-project-->
+
+                    <div class="projects-box col-12 col-md-6 position-relative " data-anime="left">
+                        <div class="highlight-img bg-img "></div>
+                        <div class=" img-Box d-flex ">
+                            
+                            <div class="img-wrapper">
+                                <img src="site-saude-img/img-01.PNG" alt="img-01">
+                            </div>
+
+                            <div class="img-wrapper">
+                                <img src="site-saude-img/img-2.PNG" alt="img-02">
+                            </div>
+
+                            <div class="img-wrapper">
+                                <img src="site-saude-img/img-03.PNG" alt="img-03">
+                            </div>
+
+                            <div class="img-wrapper">
+                                <img src="site-saude-img/img-04.PNG" alt="img-04">
+                            </div>
+
+                        </div><!--img-Box-->
     
-            <div class="card-skill col-md-1 col-3">
-                <div class="percent" style="--clr:#f00;--num:65;">
-      
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="50" cy="50" r="50"></circle>
-                        <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                </div>
-                <div class="number">
-                    <h2>65<span>%</span></h2>
-                    <p>Git</p>
-                </div>
-            </div>
-      
-            <div class="card-skill col-md-1 col-3">
-                <div class="percent" style="--clr:#bbbb;--num:80;">
-      
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="50" cy="50" r="50"></circle>
-                        <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                </div>
-                <div class="number">
-                    <h2>80<span>%</span></h2>
-                    <p>GitHub</p>
-                </div>
-            </div>
-          </div><!--container-skill-percent-->
+                    </div><!--projects-box -->
+                </div><!--row--->
+            </section>
 
-    </section>
+            <section id="contact" class="container-xl bg-linear-gradient">
+                <h1 class="text-center">Contato</h1>
+            </section>
 
+         
 
-
-    
     <script src="script/script.js"></script>
     <!-- Bootstrap script: -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
     
      <!-- CDN Font-Awensome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
