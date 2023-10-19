@@ -42,7 +42,7 @@ const links = document.querySelectorAll("nav a[href^='#']");
     links.forEach(link =>{
         link.addEventListener("click",scrollToSection);
     })
-    // End Smooth Scroll:
+// End Smooth Scroll:
 // -------------------------------------------
 
 // Start Changing Background :
@@ -53,27 +53,62 @@ clickBg.addEventListener("click",changeColorTxt);
     document.body.classList.toggle("active-light");
     document.querySelector(".percent-skills").classList.toggle("skillsBg");
 }
-    
+// -------------------------------------------    
 
-// Project Showcase: 
+// Projects Showcase: 
 const imgProjects = document.querySelectorAll(".img-wrapper img");
-const highlightImg =  document.querySelector(".highlight-img");
+const highlightImg =  document.querySelectorAll(".highlight-img");
+const projectsBox = document.querySelectorAll(".projects-box");
 
-imgProjects.forEach((item)=>{ 
-  item.style.border = '4px solid red';
 
-  highlightImg.style.backgroundImag ? '': highlightImg.style.backgroundImage = `url(${imgProjects[0].src})`;
-  item.addEventListener('click',() => {
-     highlightImg.style.backgroundImage = `url(${item.src})`;     
-     minImgBorder( item);
+
+   imgProjects.forEach((item)=>{ 
+     item.style.border = '5px solid transparent';
+     imgProjects[0].style.border= '4px solid #7c4dff'
+  
+       highlightImg[0].style.backgroundImag ? '': highlightImg[0].style.backgroundImage = `url(${imgProjects[0].src})`;
+
+     item.addEventListener('click', function() {
+        highlightImg[0].style.backgroundImage = `url(${item.src})`;
+        imgProjects.forEach(item =>{
+         item.style.border ='5px solid transparent';
+       });
+        this.style.border ='5px solid #7c4dff';
+     });
+   })
+   
+
+  //  CONFIGURAR ALTERAÇAO DE IMAGENS:
+   imgProjects.forEach((item)=>{ 
+    item.style.border = '5px solid transparent';
+    imgProjects[0].style.border= '4px solid #7c4dff'
+ 
+      highlightImg[1].style.backgroundImag ? '': highlightImg[1].style.backgroundImage = `url(${imgProjects[0].src})`;
+
+    item.addEventListener('click', function() {
+       highlightImg[1].style.backgroundImage = `url(${item.src})`;
+       imgProjects.forEach(item =>{
+        item.style.border ='5px solid transparent';
+      });
+       this.style.border ='5px solid #7c4dff';
     });
-});
+  })
+  
 
 
-minImgBorder =(item) =>{
-  item.style.border = '4px solid green'
 
-  }
+
+
+
+
+
+
+
+
+
+
+
+
     
 
   

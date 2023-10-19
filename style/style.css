@@ -89,7 +89,6 @@ button.bg-linear-gradient{
 .box-ch-background .checkbox {
     position: absolute;
     opacity: 0;
-    background: blue;
 }
 
 .box-ch-background label {
@@ -294,6 +293,7 @@ section.projects .highlight-img{
     background-size: cover;
     box-shadow: 5px 5px 30px #000 inset;
     border-radius: 20px ;
+    border: 1px solid red;
    
 }
 section.projects .img-Box{
@@ -301,9 +301,6 @@ section.projects .img-Box{
     border-radius: 20px ;
     padding: 10px;
     gap: 10px;
-}
-section.projects .img-wrapper{
-    /* background: transparent; */
 }
 
 section.projects .img-wrapper > img{
