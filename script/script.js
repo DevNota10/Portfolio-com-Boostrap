@@ -57,43 +57,28 @@ clickBg.addEventListener("click",changeColorTxt);
 
 // Projects Showcase: 
 const imgProjects = document.querySelectorAll(".img-wrapper img");
-const highlightImg =  document.querySelectorAll(".highlight-img");
 const projectsBox = document.querySelectorAll(".projects-box");
 
 
+// Select Image:
+  imgProjects.forEach((img,id)=>{
+    imgProjects[0].style.border ='5px solid #7c4dff';
+    img.style.border ='5px solid transparent';
 
-   imgProjects.forEach((item)=>{ 
-     item.style.border = '5px solid transparent';
-     imgProjects[0].style.border= '4px solid #7c4dff'
-  
-       highlightImg[0].style.backgroundImag ? '': highlightImg[0].style.backgroundImage = `url(${imgProjects[0].src})`;
+    img.addEventListener('click',function(){
+      const highlightImg = img.parentElement.parentElement.previousElementSibling;
+      highlightImg.style.backgroundImage= `url(${img.src})`;
 
-     item.addEventListener('click', function() {
-        highlightImg[0].style.backgroundImage = `url(${item.src})`;
-        imgProjects.forEach(item =>{
-         item.style.border ='5px solid transparent';
-       });
-        this.style.border ='5px solid #7c4dff';
-     });
-   })
-   
-
-  //  CONFIGURAR ALTERAÇAO DE IMAGENS:
-   imgProjects.forEach((item)=>{ 
-    item.style.border = '5px solid transparent';
-    imgProjects[0].style.border= '4px solid #7c4dff'
- 
-      highlightImg[1].style.backgroundImag ? '': highlightImg[1].style.backgroundImage = `url(${imgProjects[0].src})`;
-
-    item.addEventListener('click', function() {
-       highlightImg[1].style.backgroundImage = `url(${item.src})`;
-       imgProjects.forEach(item =>{
-        item.style.border ='5px solid transparent';
-      });
-       this.style.border ='5px solid #7c4dff';
+      imgProjects.forEach(img=>{
+        img.style.border ='5px solid transparent';
+      })     
+      this.style.border ='5px solid #7c4dff';
     });
-  })
+  });
+    
+
   
+
 
 
 
