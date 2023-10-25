@@ -62,17 +62,19 @@ const projectsBox = document.querySelectorAll(".projects-box");
 
 // Select Image:
   imgProjects.forEach((img,id)=>{
+    const highlightImg = img.parentElement.parentElement.previousElementSibling;
+    highlightImg.style.backgroundImage= `url(${img.src})`;
     imgProjects[0].style.border ='5px solid #7c4dff';
-    img.style.border ='5px solid transparent';
 
-    img.addEventListener('click',function(){
-      const highlightImg = img.parentElement.parentElement.previousElementSibling;
+    img.style.border ='5px solid transparent';
+    img.addEventListener('mouseover',function(){
       highlightImg.style.backgroundImage= `url(${img.src})`;
 
       imgProjects.forEach(img=>{
         img.style.border ='5px solid transparent';
       })     
-      this.style.border ='5px solid #7c4dff';
+     let alt= this.style.border ='5px solid #7c4dff';
+
     });
   });
     
