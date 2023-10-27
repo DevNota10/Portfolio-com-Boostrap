@@ -17,28 +17,32 @@
     <!-- Bootstrap css: -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <!-- Google Fonts: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
     <title>Portfólio Kleber</title>
 </head>
 <body class="">
 
-    <header class=" h90 bg-black position-fixed w-100   z-3  ">
+    <header class=" bg-black position-fixed w-100 pb-1 z-3  ">
             <div class=" container-xl">
-                <div class="row ">
-
-                    <div class="col-3 ">
+                <div class="row  ">
+                    <div class="col-3">
                         <div class="logo h90 bg-img" style="background-image: url(img/logo-2.svg);" ></div>
                     </div>
         
-                    <div class="h90  col-6 ">
+                    <div class="col-6 mt-4 p-0">
                         <nav>
-                                <button type="button" class="bg-linear-gradient btn" id="btn-mobile" 
+                                <button type="button" class="bg-linear-gradient btn z-3 position-absolute" id="btn-mobile" 
                                 aria-label="Abrir Menu"
                                 aria-haspopup="true"
                                 aria-expanded="false">  
-                                    Menu
+                                    X
                                 </button>
 
-                            <ul id="menu" role="menu" class="h90 d-flex list-unstyled justify-content-around align-items-center">
+                            <ul id="menu" role="menu" class="d-flex z-3 list-unstyled position-relative ">
                                 <li><a href="#aboutMe">Sobre</a></li>
                                 <li><a href="#projects">Projetos</a></li>
                                 <li><a href="#contact">Contato</a></li>       
@@ -46,18 +50,18 @@
                         </nav>
                     </div>
 
-                    <div class=" h90 col-3 ">
+                    <div class="col-3">
                         <div class=" h-100 box-ch-background position-relative d-flex align-items-center justify-content-center h-100">
-                            <input type="checkbox" class="checkbox" name="check" id="check" />
+                            <input type="checkbox" class="checkbox position-absolute opacity-0" name="check" id="check" />
                             <label class=" title d-flex justify-content-between " for="check">
                               <i class="fas fa-sun"></i>
                               <i class="fas fa-moon"></i>
                               <div class="ball position-absolute "></div>
                             </label>
                         </div>
-                </div>
-                
-            </div>
+                    </div>
+                </div> <!--row--> 
+            </div><!--container-xl-->
     </header>
 
     <section id="aboutMe" class="about-me container-xl position-relative pt-5 pb-5 mb-5 ">
@@ -288,7 +292,7 @@
 
                     <div class="projects-box col-12 col-md-6  position-relative " data-anime="left">
                         <div class="highlight-img bg-img "></div>
-                        <div class=" img-Box d-flex ">
+                        <div class=" img-Box d-flex   ">
                             
                             <div class="img-wrapper">
                                 <img src="site-saude-img/Image-01-projeto-saude.png" alt="img-01">
@@ -306,13 +310,16 @@
                                 <img src="site-saude-img/Image-04-projeto-saude.png" alt="img-04">
                             </div>
 
+                            <div class="img-wrapper">
+                                <img src="site-saude-img/Image-05-projeto-saude.png" alt="img-04">
+                            </div>
+
                         </div><!--img-Box-->
     
                     </div><!--projects-box -->
                 </div><!--row--->
                 
             </section>
-
 
             <section class="projects container-xl " >      
                 <div class="row">
@@ -364,9 +371,7 @@
 
 
 
-            <section class="projects container-xl " >
-                <h1 class="h200 title d-flex align-items-center justify-content-center ">Projetos:</h1>
-               
+            <section class="projects container-xl " >      
                 <div class=" flex-row-reverse row">
                     <div class="text-project  dark-p col-12 col-md-6  p-4  text-md-start" data-anime="right">
                       <h2 class="text-center p-4"> Saúde e bem-estar</h2>
@@ -417,31 +422,62 @@
 
 
 
-            <section id="contact" class="container-xl bg-linear-gradient">
+            <section id="contact" class="container-xl p-3 p-md-5 bg-linear-gradient">
                 <h1 class="text-center">Contato</h1>
 
-                <form action="" >
-                    <div class="input-wraper w50">
-                        <input type="text">
-                        <label for="name">Nome</label>
-                    </div>
-                    <div class="input-wraper w50">
-                        <input type="text">
-                    </div>
-                    <div class="input-wraper w100">
-                        <input type="text">
-                    </div>
-                </form>
-            </section>
+                <form action="" class="  w-100 m-auto p-4 p-md-5 " >
+                    <div class="row-form row gap-1">
+                        <div class=" col-12 col-md-7 ">
+                            <div class="input-wraper w-100">
+                                <label class="w-50" for="name">Nome:</label>
+                                <input id="name" type="text" class="mb-3 w-100" >
+                            </div>
+        
+                            <div class="input-wraper  w-100">
+                                <label class="w-50"  for="name">E-Mail:</label>
+                                <input id="email"  type="email" class="mb-3 w-100">
+                            </div>
+        
+                            <div class="input-wraper w-50 ">
+                                <label class="w-50" for="tel">Tel:</label >
+                                <input id="tel" type="text" class="mb-3 w-100">
+                            </div>
 
-         
+                        </div><!--col-6-->
+
+                        <div class="input-wraper col-md-4 ">
+                            <label class="w-50" for="tel">layout:</label >
+                                <div class="row gap-1 flex-wrap">
+                                    <div class="img-layout"></div>
+                                    <div class="img-layout"></div>
+                                    <div class="img-layout"></div>
+                                    <div class="img-layout"></div>
+
+                                </div>
+                            <input id="tel" type="file" class="mb-3 ">
+                        </div>
+
+
+                        
+                    </div><!--row-form row-->
+
+
+                    <div class="input-wraper w100">
+                        <label for="msg">Obs:</label>
+                        <textarea id="textarea" name=""  class="w-100 h200" ></textarea>
+                    </div>
+
+                    <div class="btn-form  w-100 mt-5 ">
+                        <button class=" m-auto d-block btn-form bg-linear-gradient">Enviar</button>
+                    </div>
+
+                </form>
+            </section>     
 
     <script src="script/script.js"></script>
     <!-- Bootstrap script: -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-
-    
      <!-- CDN Font-Awensome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>

@@ -1,9 +1,18 @@
 
+// ---------- Start Smooth Scroll: ----------
+const links = document.querySelectorAll("nav a[href^='#']");
+  links.forEach(link =>{
+      link.addEventListener("click",scrollToSection);
+  })
+  getDistanceFromtheTop =(el)=>{
+    const id = el.getAttribute("href");
+    return document.querySelector(id).offsetTop;
+   };
 
-// Start Smooth Scroll:
-getDistanceFromtheTop =(el)=>{
- const id = el.getAttribute("href");
- return document.querySelector(id).offsetTop
+function scrollToSection (e){
+  e.preventDefault()
+  const distanceFromtheTop = getDistanceFromtheTop(e.target) - 90;
+  smoothScrollTo(0,distanceFromtheTop)
 };
 
  function smoothScrollTo(endX, endY, duration) {
@@ -13,7 +22,7 @@ getDistanceFromtheTop =(el)=>{
     const distanceY = endY - startY;
     const startTime = new Date().getTime();
   
-    duration = typeof duration !== "undefined" ? duration : 400;
+    duration = typeof duration !== "undefined" ? duration : 100;
   
     const easeInOutQuart = (time, from, distance, duration) => {
       if ((time /= duration / 2) < 1)
@@ -31,21 +40,17 @@ getDistanceFromtheTop =(el)=>{
       window.scroll(newX, newY);
     }, 1000 / 60);
   };
+// ---------- Start Menu-Mobile ----------
 
-scrollToSection =(e)=>{
-    e.preventDefault()
-    const distanceFromtheTop = getDistanceFromtheTop(e.target) - 90;
-    smoothScrollTo(0,distanceFromtheTop)
-};
+const btnMobile = document.querySelector("#btn-mobile");
+btnMobile.addEventListener('click',()=>{
+  console.log('clicou')
+  const nav = document.querySelector("nav");
+  nav.classList.toggle('active')
+})
 
-const links = document.querySelectorAll("nav a[href^='#']");
-    links.forEach(link =>{
-        link.addEventListener("click",scrollToSection);
-    })
-// End Smooth Scroll:
-// -------------------------------------------
 
-// Start Changing Background :
+// ---------- Start Changing Background: ----------
 const clickBg = document.querySelector(".box-ch-background label");
 clickBg.addEventListener("click",changeColorTxt);
 
@@ -53,20 +58,28 @@ clickBg.addEventListener("click",changeColorTxt);
     document.body.classList.toggle("active-light");
     document.querySelector(".percent-skills").classList.toggle("skillsBg");
 }
-// -------------------------------------------    
+
+// Repositioning boxChBackground
+ respBxCh()
+function respBxCh(){
+  const boxChBackground = document.querySelector('.box-ch-background');
+  const windowWidth = window.innerWidth;
+  if(windowWidth <= 580){
+    // document.querySelector('header > .container-xl').append(boxChBackground)
+  }
+
+}
+
+
 
 // Projects Showcase: 
 const imgProjects = document.querySelectorAll(".img-wrapper img");
-const projectsBox = document.querySelectorAll(".projects-box");
-
-
 // Select Image:
-  imgProjects.forEach((img,id)=>{
+  imgProjects.forEach((img)=>{
     const highlightImg = img.parentElement.parentElement.previousElementSibling;
     highlightImg.style.backgroundImage= `url(${img.src})`;
-    imgProjects[0].style.border ='5px solid #7c4dff';
 
-    img.style.border ='5px solid transparent';
+    StyImgProjects(img)
     img.addEventListener('mouseover',function(){
       highlightImg.style.backgroundImage= `url(${img.src})`;
 
@@ -77,6 +90,13 @@ const projectsBox = document.querySelectorAll(".projects-box");
 
     });
   });
+
+ function StyImgProjects(img){
+    imgProjects[0].style.border ='5px solid #7c4dff';
+    img.style.border ='5px solid transparent';
+    img.style.borderRadius ='20%';
+    img.style.transition ='0.5s';
+  }
     
 
   
